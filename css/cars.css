@@ -1,0 +1,582 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1100px) {
+
+    .words,
+    .one {
+        display: none;
+    }
+}
+
+@keyframes slide-left {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }  
+
+  @keyframes slide-top {
+    from {
+      margin-top: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 100%;
+    }
+  } 
+
+a {
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+    color: rgb(99, 99, 99);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    outline: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 200;
+}
+
+a:hover {
+    background-size: 100% 2px;
+}
+
+.arrow {
+    height: 65px;
+    margin-left: 20%;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color: #181818;
+    border-radius: 50%;
+}
+
+.arrow:active {
+    opacity: 0.7;
+}
+
+body {
+    padding-top: 50px;
+    background-color: #181818;
+}
+
+.black-arrow:hover {
+    background-color: #626262;
+    border-radius: 50%;
+}
+
+.black-arrow:active {
+    opacity: 0.7;
+}
+
+.bottom_container {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.bottom-title {
+    margin: 0 0 0 5%;
+    width: 90%;
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.chat {
+    padding: 10px 10px;
+    width: 45px;
+    filter: brightness(0) invert(1);
+}
+
+.chat:hover {
+    cursor: pointer;
+}
+
+.container {
+    animation: slide-left 1s;
+  }
+  
+
+.diler_container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/lamborghini_palm_beach_cover.jpeg');
+    height: 630px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.diler_title {
+    width: 45%;
+    margin: 0 10%;
+    font-size: 5vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.diler_sub_title {
+    margin: 60px 0 0 10%;
+    font-size: 2vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.diler_arrow {
+    height: 65px;
+    width: 65px;
+    margin-left: 10%;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.diler_arrow:hover {
+    background-color: #181818;
+    border-radius: 50%;
+}
+
+.diler_arrow:active {
+    opacity: 0.7;
+}
+
+.dots {
+    position: absolute;
+    font-size: 100%;
+    left: 10%;
+    top: 60%;
+    margin: 5px;
+    z-index: 200;
+}
+
+.dots label {
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+    color: rgb(99, 99, 99);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.dots label:hover {
+    background-size: 100% 2px;
+}
+
+.dots .black-arrow {
+    width: 80px;
+    height: 80px;
+    margin-right: 50%;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.header {
+    background-color: #181818;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 16px 0px;
+}
+
+.images {
+    display: flex;
+    width: 100%;
+}
+
+.images img {
+    width: 100%;
+}
+
+.images input {
+    display: none;
+}
+
+#img1:checked~.m1 {
+    margin-left: 0;
+}
+
+#img2:checked~.m2 {
+
+    margin-left: -100%;
+}
+
+#img3:checked~.m3 {
+
+    margin-left: -200%;
+}
+
+input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+}
+
+
+input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+}
+
+input[type=radio]:checked {
+    opacity: 1;
+}
+
+.intro {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin-top: 60px;
+    overflow:hidden;
+}
+
+.intro_title {
+    margin: 0 20%;
+    font-size: 7vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.lamborghini-logo {
+    cursor: pointer;
+    height: 60px;
+    padding-left: 10px;
+}
+
+.left-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    margin-left: 60px;
+}
+
+.menu-icon {
+    border-radius: 20px;
+    cursor: pointer;
+    width: 25px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1);
+}
+
+.middle-section {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+}
+
+.one ul {
+    background: #181818;
+}
+
+.one ul a {
+    color: white;
+}
+
+.one .submenu {
+    display: none;
+    background: #181818;
+}
+
+.one ul li:hover .submenu {
+    display: block;
+}
+
+.plus {
+    margin-top: 10%;
+    height: 65px;
+    width: 65px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.plus:hover {
+    background-color: #5f5f5f;
+    border-radius: 50%;
+}
+
+.plus:active {
+    opacity: 0.7;
+}
+
+.rigth-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin-right: 60px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    width: 150%;
+    z-index: 100;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.sub_title {
+    margin: 60px 0 0 20%;
+    font-size: 2vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.search-icon {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-container {
+    margin-left: 10%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    animation: slide-top 1s;
+}
+
+.slide-sub_title {
+    font-size: 2vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+.slide-title {
+    font-size: 5vw;
+    color: #fff;
+    text-align: left;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+    height: 35vw;
+    font-family: 'Helvetica Neue', sans-serif;
+    transform-style: preserve-3d;
+}
+
+#slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 400ms ease;
+}
+
+#slide1 {
+    background-image: url('../img/car1.png');
+    background-size: cover;
+    transform: scale(-1, 1);
+}
+
+#slide2 {
+    background-image: url('../img/car2.png');
+    background-size: cover;
+    transform: scale(-1, 1);
+}
+
+#slide3 {
+    background-image: url('../img/car3.png');
+    background-size: cover;
+    transform: scale(-1, 1);
+}
+
+/* Slider Functionality */
+/* Active Slide */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3 {
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+    z-index: 7;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* Next Slide */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-40%, 0, 0);
+    z-index: 6;
+
+}
+
+
+/* Next to Next Slide */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-70%, 0, 0);
+    z-index: 5;
+}
+
+/* Previous to Previous Slide */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-40%, 0, 0);
+    z-index: 4;
+}
+
+/* Previous Slide */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-70%, 0, 0);
+    z-index: 3;
+}
+
+.topmenu>li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.topmenu>li:last-child {
+    margin-right: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    filter: brightness(90%)
+}
+
+.video_media {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.words {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 13px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 200;
+    font-size: medium;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.words:hover {
+    background-size: 100% 2px;
+}
