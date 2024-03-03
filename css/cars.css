@@ -11,6 +11,118 @@
         display: none;
     }
 }
+@media (min-width: 1100px) {
+    .arrow,
+    .diler_arrow,
+    .plus,
+    .dots .black-arrow{
+        width: 100px;
+    }
+    .lamborghini-logo{
+        height: 60px;
+    }
+    .header{
+        height: 80px;
+    }
+    .intro_content{
+        margin-top: 60px;
+    }
+    .bottom_container{
+        height: 300px;
+    }
+    .diler_container{
+        min-height: 900px;
+    }
+    .dots{
+        left: 10%;
+        top: 60%;
+    }
+}
+@media (max-width: 1100px) {
+    .arrow,
+    .diler_arrow,
+    .plus,
+    .dots .black-arrow{
+        width: 100px;
+    }
+    .lamborghini-logo{
+        height: 60px;
+    }
+    .header{
+        height: 80px;
+    }
+    .intro_content{
+        margin-top: 60px;
+    }
+    .bottom_container{   
+        height: 300px;
+    }
+    .diler_container{
+        min-height: 800px;
+    }
+    .dots{
+        left: 10%;
+        top: 60%;
+    }
+}
+@media (max-width: 800px) {
+    .arrow,
+    .plus,
+    .diler_arrow,
+    .dots .black-arrow{
+        width: 65px;
+    }
+    .lamborghini-logo{
+        height: 50px;
+    }
+    .header{
+        height: 60px;
+    }
+    .intro_content{
+        margin-top: 30px;
+    }
+    .bottom_container{
+        height: 200px;
+    }
+    .diler_container{
+        min-height: 400px;
+    }
+    .dots{
+        left: 6%;
+        top: 50%;
+}
+}
+
+@media (max-width: 580px) {
+    .arrow,
+    .diler_arrow,
+    .plus{
+        width: 40px;
+    }
+    .dots .black-arrow{
+        width: 45px;
+    }
+    .lamborghini-logo{
+        height: 40px;
+    }
+    .header{
+        height: 50px;
+    }
+    .intro_content{
+        margin-top: 15px;
+    }
+    .bottom_container{
+        height: 100px;
+    }
+    .diler_container{
+        min-height: 200px;
+    }
+    .dots{
+    left: 4%;
+    top: 45%;
+    }
+    
+}
 
 @keyframes slide-left {
     from {
@@ -60,7 +172,6 @@ a:hover {
 }
 
 .arrow {
-    height: 65px;
     margin-left: 20%;
     transition: background-color 0.5s;
     cursor: pointer;
@@ -77,7 +188,7 @@ a:hover {
 
 body {
     padding-top: 50px;
-    background-color: #181818;
+    background-color: #ffffff;
 }
 
 .black-arrow:hover {
@@ -90,7 +201,7 @@ body {
 }
 
 .bottom_container {
-    height: 300px;
+    background-color: #181818;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -128,7 +239,6 @@ body {
 
 .diler_container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/lamborghini_palm_beach_cover.jpeg');
-    height: 630px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -159,8 +269,6 @@ body {
 }
 
 .diler_arrow {
-    height: 65px;
-    width: 65px;
     margin-left: 10%;
     transition: background-color 0.5s;
     cursor: pointer;
@@ -178,8 +286,6 @@ body {
 .dots {
     position: absolute;
     font-size: 100%;
-    left: 10%;
-    top: 60%;
     margin: 5px;
     z-index: 200;
 }
@@ -202,8 +308,6 @@ body {
 }
 
 .dots .black-arrow {
-    width: 80px;
-    height: 80px;
     margin-right: 50%;
     transition: background-color 0.5s;
     cursor: pointer;
@@ -214,7 +318,6 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
     flex-direction: row;
-    height: 80px;
     justify-content: space-between;
     left: 0;
     position: fixed;
@@ -297,7 +400,6 @@ input[type=radio]:checked {
     top: 0;
     left: 0;
     z-index: 3;
-    margin-top: 60px;
     overflow:hidden;
 }
 
@@ -312,7 +414,6 @@ input[type=radio]:checked {
 
 .lamborghini-logo {
     cursor: pointer;
-    height: 60px;
     padding-left: 10px;
 }
 
@@ -357,8 +458,6 @@ input[type=radio]:checked {
 
 .plus {
     margin-top: 10%;
-    height: 65px;
-    width: 65px;
     transition: background-color 0.5s;
     cursor: pointer;
 }
@@ -409,8 +508,12 @@ input[type=radio]:checked {
 
 .slider {
     position: relative;
-    width: 100%;
+    max-height: 800px;
+    min-height: 200px;
+    max-width: 1600px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slide-container {
@@ -488,19 +591,22 @@ input[type=radio]:checked {
 #s1:checked~#slide1,
 #s2:checked~#slide2,
 #s3:checked~#slide3 {
-    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
     transform: translate3d(0%, 0, 0px);
     z-index: 7;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .6);
+    
 }
 
 /* Next Slide */
 #s1:checked~#slide2,
 #s2:checked~#slide3,
 #s3:checked~#slide4 {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
     transform: translate3d(-40%, 0, 0);
     z-index: 6;
+    transform-origin: 0% 100%;
+    animation-name: leaf-odd-grow;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 
 }
 
@@ -509,7 +615,6 @@ input[type=radio]:checked {
 #s1:checked~#slide3,
 #s2:checked~#slide4,
 #s3:checked~#slide5 {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     transform: translate3d(-70%, 0, 0);
     z-index: 5;
 }
@@ -518,7 +623,6 @@ input[type=radio]:checked {
 #s1:checked~#slide4,
 #s2:checked~#slide5,
 #s3:checked~#slide1 {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     transform: translate3d(-40%, 0, 0);
     z-index: 4;
 }
@@ -527,7 +631,6 @@ input[type=radio]:checked {
 #s1:checked~#slide5,
 #s2:checked~#slide1,
 #s3:checked~#slide2 {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
     transform: translate3d(-70%, 0, 0);
     z-index: 3;
 }
@@ -580,3 +683,4 @@ ul {
 .words:hover {
     background-size: 100% 2px;
 }
+
