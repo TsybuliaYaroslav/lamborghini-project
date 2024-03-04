@@ -308,7 +308,7 @@ body {
 }
 
 .dots .black-arrow {
-    margin-right: 50%;
+    display: block;
     transition: background-color 0.5s;
     cursor: pointer;
 }
